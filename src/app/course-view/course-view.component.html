@@ -1,0 +1,25 @@
+<br>
+<hr>
+<br>
+<div class="mat-elevation-z8">
+	<table mat-table [dataSource]="courses">
+  
+		<ng-container matColumnDef="CourseID">
+			<th mat-header-cell *matHeaderCellDef> CourseID </th>
+			<td mat-cell *matCellDef="let course"> {{course.courseID}} </td>
+	  	</ng-container>
+
+	  	<ng-container matColumnDef="CourseName">
+			<th mat-header-cell *matHeaderCellDef> CourseName </th>
+			<td mat-cell *matCellDef="let course"> {{course.courseName}} </td>
+	  	</ng-container>
+
+	  	<ng-container matColumnDef="Rating">
+			<th mat-header-cell *matHeaderCellDef> Rating </th>
+			<td mat-cell *matCellDef="let course"> {{course.rating}} </td>
+	  	</ng-container>
+  
+	  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+	  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+	</table>
+</div>
